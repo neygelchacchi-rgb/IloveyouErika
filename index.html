@@ -54,10 +54,15 @@ button {
     background-color: #ff4b5c;
     color: white;
     cursor: pointer;
+    transition: 0.3s;
 }
 
 button:hover {
     background-color: #ff1e3c;
+}
+
+a {
+    text-decoration: none;
 }
 
 /* corazones */
@@ -69,8 +74,14 @@ button:hover {
 }
 
 @keyframes flotar {
-    0% { transform: translateY(0); opacity: 1; }
-    100% { transform: translateY(-800px); opacity: 0; }
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-800px);
+        opacity: 0;
+    }
 }
 </style>
 </head>
@@ -82,22 +93,21 @@ button:hover {
 
     <div class="carta">
         <p>
-        Mi amorcito bello hermoso te adoro con todo mi ser hice esta pagina especial para ti :3  
-        talvez no sea la gran cosa pero queria hacerte un detallito.. ya que sabras o talvez no..  
-        que soy pesimo con las manualidades. PEROOO si puedo programar bien e asi que hice esta pagina  
-        como un recordatoria tuyo de que te amo mucho mi vida 💖  
+        Mi amorcito bello hermoso te adoro con todo mi ser hice esta pagina especial para ti :3
+        talvez no sea la gran cosa pero queria hacerte un detallito.. ya que sabras o talvez no..
+        que soy pesimo con las manualidades. PEROOO si puedo programar bien e asi que hice esta pagina
+        como un recordatoria tuyo de que te amo mucho mi vida 💖
         </p>
 
         <p>
-        capaz siga haciendole actualizaciones a la pagina pero por ahora solo habra este mensaje  
-        y esa cancioncita para ti 🎵  
+        capaz siga haciendole actualizaciones a la pagina pero por ahora solo habra este mensaje
+        y esa cancioncita para ti 🎵
         </p>
 
         <p style="text-align:center; font-weight:bold;">
         TE AMOOOO MI AMOOOOOR :3333333 ❤️
         </p>
 
-        <!-- IMAGEN -->
         <div class="imagen">
             <img src="gato.jpg" alt="gatito meme">
         </div>
@@ -105,24 +115,15 @@ button:hover {
 
     <h2>Un pequeño detalle para ti 💕</h2>
 
-    <button onclick="reproducirMusica(this)">
-        💖 Haz clic, amor 💖
-    </button>
+    <a href="https://www.youtube.com/watch?v=_R3B2Xr8kwQ" target="_blank">
+        <button>
+            🎵 Nuestra canción 🎵
+        </button>
+    </a>
+
 </div>
 
-<!-- reproductor oculto -->
-<iframe id="ytplayer"
-width="0" height="0"
-src="https://www.youtube.com/embed/_R3B2Xr8kwQ?loop=1&playlist=_R3B2Xr8kwQ">
-</iframe>
-
 <script>
-// música
-function reproducirMusica(btn) {
-    let player = document.getElementById("ytplayer");
-    player.src += "&autoplay=1";
-    btn.innerText = "💖 Para ti, Erika 💖";
-}
 
 // corazones animados
 function crearCorazon() {
@@ -130,6 +131,7 @@ function crearCorazon() {
     corazon.classList.add("corazon");
     corazon.innerText = "❤️";
     corazon.style.left = Math.random() * window.innerWidth + "px";
+
     document.body.appendChild(corazon);
 
     setTimeout(() => {
@@ -138,6 +140,7 @@ function crearCorazon() {
 }
 
 setInterval(crearCorazon, 300);
+
 </script>
 
 </body>
